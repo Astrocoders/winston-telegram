@@ -1,4 +1,4 @@
-import TransportStream = require("winston-transport")
+import TransportStream = require('winston-transport')
 
 declare class WinstonTelegram extends TransportStream {
   constructor(options: WinstonTelegram.Options)
@@ -33,13 +33,12 @@ declare namespace WinstonTelegram {
     /** String with which to join batched messages with (default "\n\n") */
     batchingSeparator?: string
   }
-  
+
   export interface FormatOptions {
-    level: string,
-    message: string,
+    level: string
+    message: string
     metadata: any
   }
-
 }
 
 export = WinstonTelegram
